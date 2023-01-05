@@ -127,13 +127,17 @@ footer{
     z-index: 2;
 }
 
-footer div{
+.botao{
     width: 364px;
     height: 61px;
     background: #cbcbcb;
     border-radius: 50px;
+    border-width: 0px;
     margin: 0 auto;
     padding: 10px 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer p {
@@ -145,6 +149,7 @@ footer p {
     text-align: center;
     letter-spacing: 0.018em;
     color: #FFFFFF;
+    
 }
 
 .icone{
