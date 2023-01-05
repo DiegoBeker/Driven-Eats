@@ -22,6 +22,7 @@ header {
     position: fixed;
     top: 0;
     padding-left: 16px;
+    z-index: 2;
 }
 
 header h1 {
@@ -73,6 +74,7 @@ main h3 {
     align-items: center;
     padding: 10px;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    position: relative;
 }
 
 .produto img {
@@ -122,12 +124,13 @@ footer{
     padding: 16px 0;
     position: fixed;
     bottom: 0;
+    z-index: 2;
 }
 
 footer div{
     width: 364px;
     height: 61px;
-    background: #CBCBCB;
+    background: #cbcbcb;
     border-radius: 50px;
     margin: 0 auto;
     padding: 10px 70px;
@@ -142,4 +145,25 @@ footer p {
     text-align: center;
     letter-spacing: 0.018em;
     color: #FFFFFF;
+}
+
+.icone{
+    font-size: 20px;
+    color: #32B72F;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+}
+
+.selecionado{
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+}
+
+.check{
+    display: flex;
+}
+
+.liberado{
+    background-color: #32B72F;
 }
