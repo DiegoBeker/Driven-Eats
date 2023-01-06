@@ -25,42 +25,42 @@
         <section class="pratos">
             <h3>Primeiro, seu prato</h3>
             <div class="container">
-                <div onclick="selecionarProduto('.pratos','.prato1');" class="produto prato1">
+                <div data-test="dish" onclick="selecionarProduto('.pratos','.prato1');" class="produto prato1">
                     <img src="./images/x-burguer.jpeg" alt="X-Burguer">
                     <div>
-                        <h4>X-Burguer</h4>
+                        <h4 data-test="item-name">X-Burguer</h4>
                         <p>Pão, Hamburguer, Queijo, Maionese verde.</p>
-                        <span>R$ 19,90</span>
+                        <span data-test="item-price">R$ 19,90</span>
                     </div>
                     <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div onclick="selecionarProduto('.pratos','.prato2');" class="produto prato2">
+                <div data-test="dish" onclick="selecionarProduto('.pratos','.prato2');" class="produto prato2">
                     <img src="./images/x-bacon.jpg" alt="x-bacon">
                     <div>
-                        <h4>X-Bacon</h4>
+                        <h4 data-test="item-name">X-Bacon</h4>
                         <p>Pão, Hamburguer, Queijo, Bacon, Maionese.</p>
-                        <span>R$ 23,90</span>  
+                        <span data-test="item-price">R$ 23,90</span>  
                     </div>
                     <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div onclick="selecionarProduto('.pratos','.prato3');" class="produto prato3">
+                <div data-test="dish" onclick="selecionarProduto('.pratos','.prato3');" class="produto prato3">
                     <img src="./images/x-salada.jpg" alt="X-Salada">
                     <div>
-                        <h4>X-Salada</h4>
+                        <h4 data-test="item-name">X-Salada</h4>
                         <p>Pão, Hamburguer, Queijo, Alface, Maionese.</p>
-                        <span>R$ 21,90</span>
+                        <span data-test="item-price">R$ 21,90</span>
                     </div>
                     <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div onclick="selecionarProduto('.pratos','.prato4');" class="produto prato4">
+                <div data-test="dish" onclick="selecionarProduto('.pratos','.prato4');" class="produto prato4">
                     <img src="./images/x-tudo.jpeg" alt="X-Tudo">
                     <div>
-                        <h4>X-Tudo</h4>
+                        <h4 data-test="item-name">X-Tudo</h4>
                         <p>Pão, Hamburguer, Queijo, Bacon, Alface, Maionese.</p>
-                        <span>R$ 25,90</span>
+                        <span data-test="item-price">R$ 25,90</span>
                     </div>
                     <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                 </div>
@@ -70,42 +70,42 @@
         <section class="bebidas">
             <h3>Agora, sua bebida</h3>
             <div class="container">
-                <div onclick="selecionarProduto('.bebidas','.bebida1');" class="produto bebida1">
+                <div data-test="drink" onclick="selecionarProduto('.bebidas','.bebida1');" class="produto bebida1">
                     <img src="./images/coca.jpg" alt="Coca-cola">
                     <div>
-                        <h4>Coca-Cola</h4>
+                        <h4 data-test="item-name">Coca-Cola</h4>
                         <p>Lata 350ml</p>
-                        <span>R$ 4,90</span>
+                        <span data-test="item-price">R$ 4,90</span>
                     </div>
                     <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div onclick="selecionarProduto('.bebidas','.bebida2');" class="produto bebida2">
+                <div data-test="drink" onclick="selecionarProduto('.bebidas','.bebida2');" class="produto bebida2">
                     <img src="./images/guarana.jpg" alt="Guaraná">
                     <div>
-                        <h4>Guaraná</h4>
+                        <h4 data-test="item-name">Guaraná</h4>
                         <p>Lata 350ml</p>
-                        <span>R$ 4,75</span>
+                        <span data-test="item-price">R$ 4,75</span>
                     </div>
                     <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div onclick="selecionarProduto('.bebidas','.bebida3');" class="produto bebida3">
+                <div data-test="drink" onclick="selecionarProduto('.bebidas','.bebida3');" class="produto bebida3">
                     <img src="./images/fanta.jpg" alt="Fanta">
                     <div>
-                        <h4>Fanta</h4>
+                        <h4 data-test="item-name">Fanta</h4>
                         <p>Lata 350ml</p>
-                        <span>R$ 4,50</span>
+                        <span data-test="item-price">R$ 4,50</span>
                     </div>
                     <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div onclick="selecionarProduto('.bebidas','.bebida4');" class="produto bebida4">
+                <div data-test="drink" onclick="selecionarProduto('.bebidas','.bebida4');" class="produto bebida4">
                     <img src="./images/sprite.jpg" alt="Sprite">
                     <div>
-                        <h4>Sprite</h4>
+                        <h4 data-test="item-name">Sprite</h4>
                         <p>Lata 350ml</p>
-                        <span>R$ 4,25</span>
+                        <span data-test="item-price">R$ 4,25</span>
                     </div>
                     <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                 </div>
@@ -115,32 +115,32 @@
         <section class="doces">
             <h3>Por fim, sua sobremesa</h3>
             <div class="container">
-                <div onclick="selecionarProduto('.doces','.doce1');" class="produto doce1">
+                <div data-test="dessert" onclick="selecionarProduto('.doces','.doce1');" class="produto doce1">
                     <img src="./images/pudim.png" alt="Pudim">
                     <div>
-                        <h4>Pudim</h4>
+                        <h4 data-test="item-name">Pudim</h4>
                         <p>Apenas Pudim</p>
-                        <span>R$ 7,90</span>
+                        <span data-test="item-price">R$ 7,90</span>
                     </div>
                     <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div onclick="selecionarProduto('.doces','.doce2');" class="produto doce2">
+                <div data-test="dessert" onclick="selecionarProduto('.doces','.doce2');" class="produto doce2">
                     <img src="./images/brigadeiro.jpeg" alt="Brigadeiro">
                     <div>
-                        <h4>Brigadeiro</h4>
+                        <h4 data-test="item-name">Brigadeiro</h4>
                         <p>3 unidades</p>
-                        <span>R$ 5,90</span>
+                        <span data-test="item-price">R$ 5,90</span>
                     </div>
                     <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div onclick="selecionarProduto('.doces','.doce3');" class="produto doce3">
+                <div data-test="dessert" onclick="selecionarProduto('.doces','.doce3');" class="produto doce3">
                     <img src="./images/beijinho.png" alt="Beijinho">
                     <div>
-                        <h4>Beijinho</h4>
+                        <h4 data-test="item-name">Beijinho</h4>
                         <p>3 unidades</p>
-                        <span>R$ 4,90</span>
+                        <span data-test="item-price">R$ 4,90</span>
                     </div>
                     <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                 </div>
@@ -149,7 +149,7 @@
         </section>
     </main>
     <footer>
-        <button disabled="true" onclick="fecharPedido();" class="botao">
+        <button data-test="order-btn" disabled="true" onclick="fecharPedido();" class="botao">
             <p>Selecione os 3 itens para fechar o pedido</p>
         </button>
     </footer>
