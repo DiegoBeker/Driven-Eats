@@ -64,8 +64,9 @@ function atualizarCarrinho(){
 }
 
 function fecharPedido(){
-    let total = valorPrato + valorBebida + valorDoce;
+    let total = (valorPrato*100 + valorBebida*100 + valorDoce*100)/100; 
     let pedido = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeDoce}\nTotal: R$ ${total.toFixed(2)}`;
     let url = `https://wa.me/5535999999999?text=${encodeURIComponent(pedido)}`;
+    console.log(total);
     window.open(url);
 }
