@@ -31,21 +31,21 @@ function selecionarProduto(secao,item){
             contadorPrato = 1;
             nomePrato = nome.textContent;
             aux = valor.textContent.split(' ');
-            valorPrato = Number(aux[1].replace(',','.')).toFixed(2);
+            valorPrato = Number(aux[1].replace(',','.'));
             console.log(valorPrato);
             break;
         case '.bebidas':
             contadorBebida = 1;
             nomeBebida = nome.textContent;
             aux = valor.textContent.split(' ');
-            valorBebida = Number(aux[1].replace(',','.')).toFixed(2);
+            valorBebida = Number(aux[1].replace(',','.'));
             console.log(valorBebida);
             break;
         case '.doces':
             contadorSobremesa = 1;
             nomeDoce = nome.textContent;
             aux = valor.textContent.split(' ');
-            valorDoce = Number(aux[1].replace(',','.')).toFixed(2);
+            valorDoce = Number(aux[1].replace(',','.'));
             console.log(valorDoce);
             break;
     }
@@ -66,7 +66,7 @@ function atualizarCarrinho(){
 function fecharPedido(){
     let total = Number(valorPrato) + Number(valorBebida )+ Number(valorDoce);
     total = total.toFixed(2); 
-    let pedido = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeDoce}\nTotal: R$ ${total}`;
+    const pedido = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeDoce}\nTotal: R$ ${total}`;
     let url = `https://wa.me/5535999999999?text=${encodeURIComponent(pedido)}`;
     console.log(total);
     window.open(url);
