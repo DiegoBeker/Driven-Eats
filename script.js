@@ -15,7 +15,6 @@ function selecionarProduto(secao,item){
         produtoSelecionadoAnterior.classList.remove('selecionado');
         iconeAnterior.classList.remove('check');
     }
-    
     const produtoSelecionado = secaoSelecionada.querySelector(item);
     const nome = produtoSelecionado.querySelector('h4');
     const valor = produtoSelecionado.querySelector('span');
@@ -61,7 +60,7 @@ function atualizarCarrinho(){
 }
 
 function fecharPedido(){
-    const casaDecimal = 2; 
+    const casaDecimal = 2;
     const janela = document.querySelector('.janela');
     janela.classList.remove('hide');
     janela.querySelector('.ver-prato p').innerHTML = nomePrato;
