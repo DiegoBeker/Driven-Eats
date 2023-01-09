@@ -4,7 +4,7 @@ let contadorSobremesa = 0;
 let valorPrato = 0;
 let valorBebida = 0;
 let valorDoce = 0;
-let nomePrato,nomeBebida,nomeDoce,aux;
+let nomePrato,nomeBebida,nomeDoce,aux,pedido;
 
 function selecionarProduto(secao,item){
     const secaoSelecionada = document.querySelector(secao);
@@ -32,21 +32,18 @@ function selecionarProduto(secao,item){
             nomePrato = nome.textContent;
             aux = valor.textContent.split(' ');
             valorPrato = Number(aux[1].replace(',','.'));
-            console.log(valorPrato);
             break;
         case '.bebidas':
             contadorBebida = 1;
             nomeBebida = nome.textContent;
             aux = valor.textContent.split(' ');
             valorBebida = Number(aux[1].replace(',','.'));
-            console.log(valorBebida);
             break;
         case '.doces':
             contadorSobremesa = 1;
             nomeDoce = nome.textContent;
             aux = valor.textContent.split(' ');
             valorDoce = Number(aux[1].replace(',','.'));
-            console.log(valorDoce);
             break;
     }
     atualizarCarrinho();
@@ -64,11 +61,29 @@ function atualizarCarrinho(){
 }
 
 function fecharPedido(){
-    let total = Number(valorPrato) + Number(valorBebida )+ Number(valorDoce);
-    total = total.toFixed(2); 
-    
-    const pedido = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeDoce}\nTotal: R$ ${total}`;
-    let url = `https://wa.me/5535999999999?text=${encodeURIComponent(pedido)}`;
-    console.log(total);
+    const janela = document.querySelector('.janela');
+    janela.classList.remove('hide');
+    janela.querySelector('.ver-prato p').innerHTML = nomePrato;
+    janela.querySelector('.ver-prato span').innerHTML = valorPrato.toFixed(2).replace('.',',');
+    janela.querySelector('.ver-bebida p').innerHTML = nomeBebida;
+    janela.querySelector('.ver-bebida span').innerHTML = valorBebida.toFixed(2).replace('.',',');
+    janela.querySelector('.ver-doce p').innerHTML = nomeDoce;
+    janela.querySelector('.ver-doce span').innerHTML = valorDoce.toFixed(2).replace('.',',');
+    let total = valorPrato + valorBebida + valorDoce;
+    total = total.toFixed(2);
+    janela.querySelector('.total span').innerHTML = total.replace('.',',');
+    const nome = prompt('Nome');
+    const endereco = prompt('Endereço')
+    pedido = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeDoce}\nTotal: R$ ${total}\n\nNome: ${nome}\nEndereço: ${endereco}`;
+}
+
+function enviarPedido(){
+    let url = `https://wa.me/5519999999999?text=${encodeURIComponent(pedido)}`;
     window.open(url);
+}
+
+function cancelar(){
+    const janela = document.querySelector('.janela');
+    if(janela!==null)
+        janela.classList.add('hide');
 }

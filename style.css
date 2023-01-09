@@ -4,6 +4,7 @@
 
 body {
     background-color: #E5E5E5;
+    position: relative;
 }
 
 
@@ -171,4 +172,81 @@ footer p {
 
 .liberado{
     background-color: #32B72F;
+}
+
+.janela{
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height:1070px;
+    position: absolute;
+    top : -122px;
+    left: 0px;
+    z-index: 3;
+}
+
+.hide{
+    display: none;
+}
+
+.confirmar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 353px;
+    width: 377px;
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    margin:auto auto;
+    font-family: 'Roboto', sans-serif;
+    padding: 21px;
+}
+
+.confirmar div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.check {
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.confirmar h3,p,span{
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+.confirmar h3{
+    text-align: center;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.total{
+    font-weight: 700;
+}
+
+.pedir{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 329px;
+    height: 52px;
+    background-color: #FFFFFF;
+    color: #50D074;
+    font-size: 22px;
+    font-weight: 700;
+    border: none;
+    border-radius: 100px;
+}
+
+.cancelar{
+    background-color: #50D074;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    border: none;
 }

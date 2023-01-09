@@ -148,11 +148,36 @@
             </div>
         </section>
     </main>
+    
     <footer>
         <button data-test="order-btn" disabled="true" onclick="fecharPedido();" class="botao">
             <p>Selecione os 3 itens para fechar o pedido</p>
         </button>
     </footer>
+
+    <div class="janela hide">
+        <div data-test="confirm-order-modal" class="confirmar" >
+            <h3>Confirmar seu pedido</h3>
+            <div class="check ver-prato">
+                <p>Frango Yin Yang</p>
+                <span>14,90</span>    
+            </div>
+            <div class="check ver-bebida">
+                <p>Frango Yin Yang</p>
+                <span>14,90</span>    
+            </div>
+            <div class="check ver-doce">
+                <p>Frango Yin Yang</p>
+                <span>14,90</span>    
+            </div>
+            <div class="total ver-total">
+                <p>TOTAL</p>
+                <span>14,90</span> 
+            </div>
+            <button data-test="confirm-order-btn" class="pedir" onclick="enviarPedido()">Tudo certo, pode pedir!</button>
+            <button data-test="cancel-order-btn" class="cancelar" onclick="cancelar()">Cancelar</button>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="script.js"></script>
