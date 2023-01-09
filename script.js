@@ -8,9 +8,7 @@ let nomePrato,nomeBebida,nomeDoce,aux,pedido;
 
 function selecionarProduto(secao,item){
     const secaoSelecionada = document.querySelector(secao);
-
     const produtoSelecionadoAnterior = secaoSelecionada.querySelector('.selecionado');
-    
 
     if(produtoSelecionadoAnterior !== null){
         const iconeAnterior = produtoSelecionadoAnterior.querySelector('.icone');
@@ -19,10 +17,9 @@ function selecionarProduto(secao,item){
     }
     
     const produtoSelecionado = secaoSelecionada.querySelector(item);
-    const nome = produtoSelecionado.querySelector('h4')
+    const nome = produtoSelecionado.querySelector('h4');
     const valor = produtoSelecionado.querySelector('span');
     const icone = produtoSelecionado.querySelector('.icone');
-    
     produtoSelecionado.classList.add('selecionado');
     icone.classList.add('check');
 
@@ -77,7 +74,7 @@ function fecharPedido(){
     total = total.toFixed(casaDecimal);
     janela.querySelector('.total span').innerHTML = total.replace('.',',');
     const nome = prompt('Nome');
-    const rua = prompt('Endereço')
+    const rua = prompt('Endereço');
     pedido = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeDoce}\nTotal: R$ ${total}\n\nNome: ${nome}\nEndereço: ${rua}`;
 }
 
